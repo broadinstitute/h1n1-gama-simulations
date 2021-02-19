@@ -211,7 +211,7 @@ species people skills: [moving]{
 	int old_infectious_time;
 	int fam_size; //can be more precise on the average family size of 2.6 (needs to be implemented)
 	
-	float w_infect_param <- 0.000045;
+	float w_infect_param <- 0.000066125;
 
 	rgb color <- #green;
 	
