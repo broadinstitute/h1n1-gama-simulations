@@ -48,6 +48,7 @@ global {
 	list s_people_list <- shuffle(people_list);
 	int current_index<-0;
 	int counter_w<-0;
+	
 	point home_location; //an agent's assigned household
 	point work_location; //an agent's assigned workplace
 	point visit_location; //an agent's assigned workplace to go to when they don't have a workplace
@@ -59,6 +60,10 @@ global {
 	int visit_time;
 	float min_speed <- 400000 #km/#h; //commute speed doesn't really matter here (pretty much instant)
 	float max_speed <- 600000 #km/#h;
+	
+	float w_infect_param;
+	
+	//list family;
 	
 	init {
 		create large_building from: shape_file_work_buildings {///with: [type::string(read( "the_geom"))] {
@@ -145,6 +150,40 @@ global {
 				is_recovered <- false;
 				ever_infected <- true;
 				infectious_time <-0;// rnd(0,1151);
+				//those infectious at the start should be assigned families that they can infect
+				family<-(people inside living_place) closest_to(self,3); //family is the closest 3 agents in one's home; in list
+						family1<-string(family at 0); //first member of family list as a string
+						family1<- replace(family1,'p',''); //removes all of the string except the index number
+						family1<- replace(family1,'e','');
+						family1<- replace(family1,'o','');
+						family1<- replace(family1,'l','');
+						family1<- replace(family1,'(','');
+						family1<- replace(family1,')','');
+						family1_i<-int(family1); //turn the index number into an integer
+		
+						if length(family)>=2{ //if there are two members of the family
+							family2<-string(family at 1); //second member of family list as a string
+							family2<- replace(family2,'p','');
+							family2<- replace(family2,'e','');
+							family2<- replace(family2,'o','');
+							family2<- replace(family2,'l','');
+							family2<- replace(family2,'(','');
+							family2<- replace(family2,')','');
+							family2_i<-int(family2);
+							}
+		
+						if length(family)>=3{//if there are three members of the family
+							family3<-string(family at 2); //second member of family list as a string
+							family3<- replace(family3,'p','');
+							family3<- replace(family3,'e','');
+							family3<- replace(family3,'o','');
+							family3<- replace(family3,'l','');
+							family3<- replace(family3,'(','');
+							family3<- replace(family3,')','');
+							family3_i<-int(family3);
+							
+							}
+						write self; //write the name of the agents that are initially infected to check they have been assigned families
 		}
 		
 		ask nb_recovered_init among (people where (ever_infected=false)){ //establishes behavior of the agents that are recovered at the beginning (makes sure not to choose one of the agents already selected to be latent or infectious)
@@ -155,13 +194,16 @@ global {
 			ever_infected <- true;
 		}
 	}
-	reflex week_pause when: (cycle/1008)=1 or (cycle/1008)=2 or (cycle/1008)=3 or (cycle/1008)=4 or (cycle/1008)=5 or (cycle/1008)=6 or (cycle/1008)=7 or (cycle/1008)=8 or (cycle/1008)=9 or (cycle/1008)=10 or (cycle/1008)=11 or (cycle/1008)=12{
-		save [ever_infected_rate,nb_people_ever_infected,nb_people_latent,nb_people_infectious, nb_people_recovered, new_home_infections, new_work_infections] to: string(cycle)+"_45_csvfile.csv" type: "csv" header: true;
-	} //saves some key stats after the simulation has run for a week (through 12 weeks)
+		
+	///reflex week_pause when: (cycle/1008)=1 or (cycle/1008)=2 or (cycle/1008)=3 or (cycle/1008)=4 or (cycle/1008)=5 or (cycle/1008)=6 or (cycle/1008)=7 or (cycle/1008)=8 or (cycle/1008)=9 or (cycle/1008)=10 or (cycle/1008)=11 or (cycle/1008)=12{
+		///save [ever_infected_rate,nb_people_ever_infected,nb_people_latent,nb_people_infectious, nb_people_recovered, new_home_infections, new_work_infections] to: string(cycle)+"_25_csvfile.csv" type: "csv" header: true;
+	///} //saves some key stats after the simulation has run for a week (through 12 weeks)
 	
-	reflex end_simulation when: infected_rate=1.0 or cycle/1008=12 or nb_people_infectious=0{
-		do pause;
-	} //stops the simulation is everyone is infected or after 12 weeks
+	///reflex end_simulation when: infected_rate=1.0 or cycle/1008=12 or (nb_people_infectious+nb_people_latent)=0{
+		///save [ever_infected_rate,nb_people_ever_infected,nb_people_latent,nb_people_infectious, nb_people_recovered, new_home_infections, new_work_infections] to: string(cycle)+"_25_csvfile.csv" type: "csv" header: true;
+	 //saves some key stats after the simulation has run finished
+		//do pause;
+	//} //stops the simulation is everyone is infected or after 12 weeks
 }
 
 species large_building {
@@ -187,6 +229,7 @@ species road {
 	}
 }
 species people skills: [moving]{
+	list people_list;
 	small_building living_place<-nil;
 	large_building working_place<-nil;
 	point home_location;
@@ -209,9 +252,17 @@ species people skills: [moving]{
 	int old_infection_time;
 	int infectious_time;
 	int old_infectious_time;
+	list family;
+	string family1; //to be assigned when an agent is infected
+	string family2; //to be assigned when an agent is infected
+	string family3; //to be assigned when an agent is infected
+	int family1_i; //to be assigned when an agent is infected
+	int family2_i; //to be assigned when an agent is infected
+	int family3_i; //to be assigned when an agent is infected
 	int fam_size; //can be more precise on the average family size of 2.6 (needs to be implemented)
+	bool w_to_h <- false; //marker to show if an agent infected at work needs to be assigned a family
 	
-	float w_infect_param <- 0.000066125;
+	///float w_infect_param <- 0.00006125;
 
 	rgb color <- #green;
 	
@@ -224,9 +275,9 @@ species people skills: [moving]{
 	}
 		
 	reflex h_infect when: (is_infectious) and objective="resting"{ //for those who are infectious and in the home
-		list closest_3<-(people inside living_place) closest_to(self,3); //to simulate a family of limited size, agents can only infect the closest 3 agents to them that live inside their home
-		ask closest_3 inside self.living_place{
-			if the_target=nil{ //only if the agent to be infected has stopped and is not just passing by outside
+		// when one is infected at home, give it a family
+		ask people at family1_i {
+			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
 				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
 					if self.ever_infected=false{ //can only infect those not already infected
 						is_latent <- true; //if infected, make them latent
@@ -235,12 +286,149 @@ species people skills: [moving]{
 						ever_infected <- true;
 						home_infected <- true; //so we know they were infected at hom
 						infection_time <- 0; //set infection time at 0 so that the infected agent can become infectious at the appropriate time
-						write string(self)+ " infected by:" + string(myself) + "at home"; //so we know who they were infected by
+						family<-(people inside living_place) closest_to(self,3);
+						family1<-string(family at 0);
+						family1<- replace(family1,'p','');
+						family1<- replace(family1,'e','');
+						family1<- replace(family1,'o','');
+						family1<- replace(family1,'l','');
+						family1<- replace(family1,'(','');
+						family1<- replace(family1,')','');
+						family1_i<-int(family1);
+		
+						if length(family)>=2{
+							family2<-string(family at 1);
+							family2<- replace(family2,'p','');
+							family2<- replace(family2,'e','');
+							family2<- replace(family2,'o','');
+							family2<- replace(family2,'l','');
+							family2<- replace(family2,'(','');
+							family2<- replace(family2,')','');
+							family2_i<-int(family2);
+							}
+		
+						if length(family)>=3{
+							family3<-string(family at 2);
+							family3<- replace(family3,'p','');
+							family3<- replace(family3,'e','');
+							family3<- replace(family3,'o','');
+							family3<- replace(family3,'l','');
+							family3<- replace(family3,'(','');
+							family3<- replace(family3,')','');
+							family3_i<-int(family3);
+							
+							}
+						//write family;
+						write string(self)+ " infected by:" + string(myself) + "at home in cycle " +string(cycle); //so we know who they were infected by
+					}
+				}			
+			}
+		}
+		if length(family)>=2{
+		ask people at family2_i {
+			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
+				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
+					if self.ever_infected=false{ //can only infect those not already infected
+						is_latent <- true; //if infected, make them latent
+						color <- #yellow;
+						is_infected <-true;
+						ever_infected <- true;
+						home_infected <- true; //so we know they were infected at hom
+						infection_time <- 0; //set infection time at 0 so that the infected agent can become infectious at the appropriate time
+						family<-(people inside living_place) closest_to(self,3);
+						family1<-string(family at 0);
+						family1<- replace(family1,'p','');
+						family1<- replace(family1,'e','');
+						family1<- replace(family1,'o','');
+						family1<- replace(family1,'l','');
+						family1<- replace(family1,'(','');
+						family1<- replace(family1,')','');
+						family1_i<-int(family1);
+		
+						if length(family)>=2{
+							family2<-string(family at 1);
+							family2<- replace(family2,'p','');
+							family2<- replace(family2,'e','');
+							family2<- replace(family2,'o','');
+							family2<- replace(family2,'l','');
+							family2<- replace(family2,'(','');
+							family2<- replace(family2,')','');
+							family2_i<-int(family2);
+							}
+		
+						if length(family)>=3{
+							family3<-string(family at 2);
+							family3<- replace(family3,'p','');
+							family3<- replace(family3,'e','');
+							family3<- replace(family3,'o','');
+							family3<- replace(family3,'l','');
+							family3<- replace(family3,'(','');
+							family3<- replace(family3,')','');
+							family3_i<-int(family3);
+							
+							}
+						//write family;
+						write string(self)+ " infected by:" + string(myself) + "at home in cycle " +string(cycle); //so we know who they were infected by
 					}
 				}			
 			}
 		}
 	}
+	
+	if length(family)=3{
+		ask people at family3_i{
+			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
+				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
+					if self.ever_infected=false{ //can only infect those not already infected
+						is_latent <- true; //if infected, make them latent
+						color <- #yellow;
+						is_infected <-true;
+						ever_infected <- true;
+						home_infected <- true; //so we know they were infected at hom
+						infection_time <- 0; //set infection time at 0 so that the infected agent can become infectious at the appropriate time
+						family<-(people inside living_place) closest_to(self,3);
+						family1<-string(family at 0);
+						family1<- replace(family1,'p','');
+						family1<- replace(family1,'e','');
+						family1<- replace(family1,'o','');
+						family1<- replace(family1,'l','');
+						family1<- replace(family1,'(','');
+						family1<- replace(family1,')','');
+						family1_i<-int(family1);
+		
+						if length(family)>=2{
+							family2<-string(family at 1);
+							family2<- replace(family2,'p','');
+							family2<- replace(family2,'e','');
+							family2<- replace(family2,'o','');
+							family2<- replace(family2,'l','');
+							family2<- replace(family2,'(','');
+							family2<- replace(family2,')','');
+							family2_i<-int(family2);
+							}
+		
+						if length(family)>=3{
+							family3<-string(family at 2);
+							family3<- replace(family3,'p','');
+							family3<- replace(family3,'e','');
+							family3<- replace(family3,'o','');
+							family3<- replace(family3,'l','');
+							family3<- replace(family3,'(','');
+							family3<- replace(family3,')','');
+							family3_i<-int(family3);
+							
+							}
+						//write family;
+						write string(self)+ " infected by:" + string(myself) + "at home in cycle " +string(cycle); //so we know who they were infected by
+					}
+				}			
+			}
+		}
+	}
+	
+	}
+	
+	
 	reflex w_infect when: (is_infectious) and (objective="working" or objective="visiting"){ //for those infectious and at work
 		ask 50 among (people inside self.working_place at_distance (6) #m){ //to simulate a workplace of limited size, agents can only infect 50 of the agents that share their workplace
 			if the_target=nil{
@@ -252,11 +440,48 @@ species people skills: [moving]{
 						ever_infected <- true;
 						work_infected <- true;
 						infection_time <- 0;
-						write string(self)+ " infected by:" + string(myself) + "at work";
+						w_to_h <- true; //set true so the next time an agent goes home, it will define its family
+						write string(self)+ " infected by:" + string(myself) + "at work in cycle "+string(cycle);
 					}
 				}			
 			}
 		}
+	}
+	
+	reflex w_to_h when: w_to_h=true and objective="resting"{
+		// for those infected at work to define their family
+		family<-(people inside living_place) closest_to(self,3);
+						family1<-string(family at 0);
+						family1<- replace(family1,'p','');
+						family1<- replace(family1,'e','');
+						family1<- replace(family1,'o','');
+						family1<- replace(family1,'l','');
+						family1<- replace(family1,'(','');
+						family1<- replace(family1,')','');
+						family1_i<-int(family1);
+		
+						if length(family)>=2{
+							family2<-string(family at 1);
+							family2<- replace(family2,'p','');
+							family2<- replace(family2,'e','');
+							family2<- replace(family2,'o','');
+							family2<- replace(family2,'l','');
+							family2<- replace(family2,'(','');
+							family2<- replace(family2,')','');
+							family2_i<-int(family2);
+							}
+		
+						if length(family)>=3{
+							family3<-string(family at 2);
+							family3<- replace(family3,'p','');
+							family3<- replace(family3,'e','');
+							family3<- replace(family3,'o','');
+							family3<- replace(family3,'l','');
+							family3<- replace(family3,'(','');
+							family3<- replace(family3,')','');
+							family3_i<-int(family3);
+							}
+							w_to_h<-false;
 	}
 	
 	reflex turn_infectious when: is_latent{
@@ -346,6 +571,7 @@ experiment Alachua type:gui{
 	parameter "Shapefile for the roads:" var: shape_file_roads category: "GIS" ;
 	parameter "Number of people agents" var: nb_people category: "People" ;
 	parameter "Nb people infected at init" var: nb_infected_init min:1 max: 247336;
+	parameter "Work Infectiousness Parameter" var: w_infect_param init:0.000066125 min:0.00001 max:0.0001;
 	output {
 		monitor "Infected people rate" value: infected_rate;
 		monitor "Ever infected people rate" value: ever_infected_rate;
