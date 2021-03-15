@@ -63,6 +63,9 @@ global {
 	
 	float w_infect_param;
 	
+	bool rh_complete<-false;
+	list hundred_list<-[];
+	
 	//list family;
 	
 	init {
@@ -430,7 +433,7 @@ species people skills: [moving]{
 	
 	
 	reflex w_infect when: (is_infectious) and (objective="working" or objective="visiting"){ //for those infectious and at work
-		ask 50 among (people inside self.working_place at_distance (6) #m){ //to simulate a workplace of limited size, agents can only infect 50 of the agents that share their workplace
+		ask 50 among (people inside self.working_place){ //at_distance (6) #m){ //to simulate a workplace of limited size, agents can only infect 50 of the agents that share their workplace
 			if the_target=nil{
 				if flip(w_infect_param) { //parameter of infectivity based on experimentation
 					if self.ever_infected=false{
@@ -558,7 +561,20 @@ species people skills: [moving]{
 		objective <- "resting";
 		the_target <- home_location;
 	}
+	reflex record_every_100 when: ((cycle mod 100)=0 or cycle=12096) and cycle!=0 and rh_complete=false{
+		ask 1 among people{
+		add nb_people_ever_infected to: hundred_list;
+		//write hundred_list;
+		
+		}
+		rh_complete<-true;
+	}
 	
+	reflex reset_record_every_100 when: (cycle mod 100)!=0 and rh_complete=true{
+		rh_complete<-false;
+	}
+	
+
 	aspect base {
 		draw circle(1) color: is_infectious ? #red: color border: #black;
 	}
@@ -571,7 +587,7 @@ experiment Alachua type:gui{
 	parameter "Shapefile for the roads:" var: shape_file_roads category: "GIS" ;
 	parameter "Number of people agents" var: nb_people category: "People" ;
 	parameter "Nb people infected at init" var: nb_infected_init min:1 max: 247336;
-	parameter "Work Infectiousness Parameter" var: w_infect_param init:0.000066125 min:0.00001 max:0.0001;
+	parameter "Work Infectiousness Parameter" var: w_infect_param init:0.000066125 min:0.00001 max:1.0;
 	output {
 		monitor "Infected people rate" value: infected_rate;
 		monitor "Ever infected people rate" value: ever_infected_rate;
@@ -599,6 +615,15 @@ experiment Alachua type:gui{
 				data "ever infected" value: nb_people_ever_infected color: #grey;
 			}
 		}
+	}
+}
+experiment '100 times' type:batch repeat: 100 until: cycle>12101 parallel: 8 {
+	reflex end_of_runs{
+		list comp_hundred_list;
+		ask simulations{
+			add (self.hundred_list) to: comp_hundred_list;
+			}
+		save[comp_hundred_list] to: "results_Alachua_100.csv" type:csv rewrite: false;
 	}
 }
 	

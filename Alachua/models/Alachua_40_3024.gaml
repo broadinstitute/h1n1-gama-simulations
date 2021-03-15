@@ -61,7 +61,7 @@ global {
 	float min_speed <- 400000 #km/#h; //commute speed doesn't really matter here (pretty much instant)
 	float max_speed <- 600000 #km/#h;
 	
-	float w_infect_param;
+	float w_infect_param<-0.000066125;
 	
 	int sah_counter<-0;
 	bool sah_complete<-false;

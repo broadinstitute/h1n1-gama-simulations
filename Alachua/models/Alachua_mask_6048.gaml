@@ -609,7 +609,7 @@ species people skills: [moving]{
 		ma_5_complete<-true;
 	}
 	
-	reflex mask_assign_6 when: cycle=5906 and ma_6_complete=false{
+	reflex mask_assign_6 when: cycle=5904 and ma_6_complete=false{
 		ask int((0.3/7)*nb_people) among (people where (masked=false)){
 			masked<-true;
 			w_infect_param<-(1-0.7)*(w_infect_param);
