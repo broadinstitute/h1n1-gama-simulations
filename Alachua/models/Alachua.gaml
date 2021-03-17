@@ -279,6 +279,7 @@ species people skills: [moving]{
 		
 	reflex h_infect when: (is_infectious) and objective="resting"{ //for those who are infectious and in the home
 		// when one is infected at home, give it a family
+		if length(family)>=1{
 		ask people at family1_i {
 			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
 				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
@@ -326,6 +327,8 @@ species people skills: [moving]{
 					}
 				}			
 			}
+		}
+		
 		}
 		if length(family)>=2{
 		ask people at family2_i {
@@ -634,21 +637,21 @@ experiment '100 times' type:batch repeat: 100 until: cycle>12101 parallel: 8 {
 	parameter "Nb people infected at init" var: nb_infected_init min:1 max: 247336;
 	parameter "Work Infectiousness Parameter" var: w_infect_param init:0.000066125 min:0.00001 max:1.0;
 	output {
-		monitor "Infected people rate" value: infected_rate;
-		monitor "Ever infected people rate" value: ever_infected_rate;
+		//monitor "Infected people rate" value: infected_rate;
+		//monitor "Ever infected people rate" value: ever_infected_rate;
 		monitor "Total Infections" value: nb_people_ever_infected;
-		monitor "Latent" value: nb_people_latent;
-		monitor "Infectious" value: nb_people_infectious;
-		monitor "Recovered" value: nb_people_recovered;
-		monitor "New Home Infections" value: new_home_infections;
-		monitor "New Work Infections" value: new_work_infections;
-		display city_display type: opengl {
-			species large_building aspect: base;
-			species small_building aspect: base;
+		//monitor "Latent" value: nb_people_latent;
+		//monitor "Infectious" value: nb_people_infectious;
+		//monitor "Recovered" value: nb_people_recovered;
+		//monitor "New Home Infections" value: new_home_infections;
+		//monitor "New Work Infections" value: new_work_infections;
+		//display city_display type: opengl {
+			//species large_building aspect: base;
+			//species small_building aspect: base;
 			///species school_building aspect: base;
-			species road aspect: geom;
-			species people aspect: base;
-		}
+			//species road aspect: geom;
+			//species people aspect: base;
+		//}
 		
 		}
 }
