@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Experiment_plan>
+	<Simulation id="1" sourcePath="./Alachua/models/Alachua_40_9072.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="1" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+</Experiment_plan>

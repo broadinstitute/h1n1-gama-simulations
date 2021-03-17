@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Experiment_plan>
+	<Simulation id="1" sourcePath="./Osceola/models/Osceola_75_9072.gaml" finalStep="12101" experiment="Osceola">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.00009168125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="1" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+</Experiment_plan>
