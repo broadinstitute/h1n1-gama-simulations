@@ -628,6 +628,31 @@ experiment Alachua type:gui{
 	}
 }
 experiment '100 times' type:batch repeat: 100 until: cycle>12101 parallel: 8 {
+	parameter "Shapefile for large buildings:" var: shape_file_work_buildings category: "GIS" ;
+	parameter "Shapefile for small buildings:" var: shape_file_home_buildings category: "GIS" ;
+	parameter "Shapefile for the bounds:" var: shape_file_bounds category: "GIS" ;
+	parameter "Shapefile for the roads:" var: shape_file_roads category: "GIS" ;
+	parameter "Number of people agents" var: nb_people category: "People" ;
+	parameter "Nb people infected at init" var: nb_infected_init min:1 max: 247336;
+	parameter "Work Infectiousness Parameter" var: w_infect_param init:0.000066125 min:0.00001 max:1.0;
+	output {
+		monitor "Infected people rate" value: infected_rate;
+		monitor "Ever infected people rate" value: ever_infected_rate;
+		monitor "Total Infections" value: nb_people_ever_infected;
+		monitor "Latent" value: nb_people_latent;
+		monitor "Infectious" value: nb_people_infectious;
+		monitor "Recovered" value: nb_people_recovered;
+		monitor "New Home Infections" value: new_home_infections;
+		monitor "New Work Infections" value: new_work_infections;
+		display city_display type: opengl {
+			species large_building aspect: base;
+			species small_building aspect: base;
+			///species school_building aspect: base;
+			species road aspect: geom;
+			species people aspect: base;
+		}
+		
+		}
 	reflex end_of_runs{
 		list comp_hundred_list;
 		ask simulations{
