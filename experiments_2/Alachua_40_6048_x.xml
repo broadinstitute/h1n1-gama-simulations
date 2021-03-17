@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Experiment_plan>
+	<Simulation id="1" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="1" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="2" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="2" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="3" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="3" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="4" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="4" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="5" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="5" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="6" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="6" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="7" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="7" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="8" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="8" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="9" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="9" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="10" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="10" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="11" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="11" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="12" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="12" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="13" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="13" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="14" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="14" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="15" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="15" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="16" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="16" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="17" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="17" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="18" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="18" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="19" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="19" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="20" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="20" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="21" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="21" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="22" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="22" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="23" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="23" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="24" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="24" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="25" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="25" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="26" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="26" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="27" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="27" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="28" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="28" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="29" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="29" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="30" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="30" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="31" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="31" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="32" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="32" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="33" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="33" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="34" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="34" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="35" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="35" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="36" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="36" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="37" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="37" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="38" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="38" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="39" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="39" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="40" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="40" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="41" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="41" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="42" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="42" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="43" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="43" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="44" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="44" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="45" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="45" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="46" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="46" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="47" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="47" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="48" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="48" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="49" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="49" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="50" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="50" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="51" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="51" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="52" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="52" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="53" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="53" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="54" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="54" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="55" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="55" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="56" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="56" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="57" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="57" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="58" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="58" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="59" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="59" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="60" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="60" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="61" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="61" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="62" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="62" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="63" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="63" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="64" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="64" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="65" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="65" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="66" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="66" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="67" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="67" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="68" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="68" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="69" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="69" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="70" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="70" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="71" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="71" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="72" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="72" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="73" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="73" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="74" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="74" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="75" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="75" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="76" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="76" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="77" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="77" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="78" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="78" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="79" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="79" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="80" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="80" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="81" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="81" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="82" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="82" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="83" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="83" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="84" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="84" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="85" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="85" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="86" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="86" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="87" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="87" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="88" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="88" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="89" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="89" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="90" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="90" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="91" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="91" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="92" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="92" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="93" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="93" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="94" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="94" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="95" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="95" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="96" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="96" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="97" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="97" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="98" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="98" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="99" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="99" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="100" sourcePath="./Alachua/models/Alachua_40_6048.gaml" finalStep="12101" experiment="Alachua">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="100" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+</Experiment_plan>
+	
+
