@@ -282,6 +282,7 @@ species people skills: [moving]{
 		
 	reflex h_infect when: (is_infectious) and objective="resting"{ //for those who are infectious and in the home
 		// when one is infected at home, give it a family
+		if length(family)>=1{
 		ask people at family1_i {
 			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
 				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
@@ -329,6 +330,8 @@ species people skills: [moving]{
 					}
 				}			
 			}
+		}
+		
 		}
 		if length(family)>=2{
 		ask people at family2_i {
