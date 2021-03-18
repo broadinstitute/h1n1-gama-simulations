@@ -564,7 +564,7 @@ species people skills: [moving]{
 		objective <- "resting";
 		the_target <- home_location;
 	}
-	reflex record_every_100 when: ((cycle mod 100)=0 or cycle=12096) and cycle!=0 and rh_complete=false{
+	reflex record_every_100 when: ((cycle mod 100)=0) and cycle!=0 and rh_complete=false{
 		ask 1 among people{
 		add nb_people_ever_infected to: hundred_list;
 		//write hundred_list;
@@ -573,7 +573,7 @@ species people skills: [moving]{
 		rh_complete<-true;
 	}
 	
-	reflex reset_record_every_100 when: (cycle mod 100)!=0 and rh_complete=true{
+	reflex reset_record_every_100 when: ((cycle mod 100)!=0) and rh_complete=true{
 		rh_complete<-false;
 	}
 	
