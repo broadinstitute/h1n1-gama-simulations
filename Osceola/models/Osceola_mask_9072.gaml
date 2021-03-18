@@ -322,6 +322,7 @@ species people skills: [moving]{
 	
 	reflex h_infect when: (is_infectious) and objective="resting"{ //for those who are infectious and in the home
 		//list closest_3<-(people inside living_place) closest_to(self,3); //to simulate a family of limited size, agents can only infect the closest 3 agents to them that live inside their home
+		if length(family)>=1{
 		ask people at family1_i {
 			if objective="resting"{ //only if the agent to be infected has stopped and is not just passing by outside
 				if flip(0.0002) { //parameter of infectivity based on case study (produces roughly 10 home infections from an intial population of 33, which is around 30%)
@@ -369,6 +370,8 @@ species people skills: [moving]{
 					}
 				}			
 			}
+		}
+		
 		}
 		if length(family)>=2{
 		ask people at family2_i {
@@ -681,7 +684,7 @@ species people skills: [moving]{
 		objective <- "resting";
 		the_target <- home_location;
 	}
-	reflex record_every_100 when: ((cycle mod 100)=0 or cycle=12096) and cycle!=0 and rh_complete=false{
+	reflex record_every_100 when: ((cycle mod 100)=0) and cycle!=0 and rh_complete=false{
 		ask 1 among people{
 		add nb_people_ever_infected to: hundred_list;
 		//write hundred_list;
@@ -690,7 +693,7 @@ species people skills: [moving]{
 		rh_complete<-true;
 	}
 	
-	reflex reset_record_every_100 when: (cycle mod 100)!=0 and rh_complete=true{
+	reflex reset_record_every_100 when: ((cycle mod 100)!=0) and rh_complete=true{
 		rh_complete<-false;
 	}
 	
