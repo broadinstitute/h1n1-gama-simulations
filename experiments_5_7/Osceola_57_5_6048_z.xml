@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Experiment_plan>
+	<Simulation id="5" sourcePath="./Osceola/models/Osceola_57_5_6048.gaml" finalStep="12101" experiment="Osceola">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="5" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="6" sourcePath="./Osceola/models/Osceola_57_5_6048.gaml" finalStep="12101" experiment="Osceola">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="6" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+	<Simulation id="7" sourcePath="./Osceola/models/Osceola_57_5_6048.gaml" finalStep="12101" experiment="Osceola">
+	  <Parameters>
+	    <Parameter name="Work Infectiousness Parameter" type="FLOAT" value="0.000066125" />
+	  </Parameters>
+	  <Outputs>
+	    <Output id="7" name="Total Infections" framerate="100" />
+	  </Outputs>
+	</Simulation>
+</Experiment_plan>
+	
+
